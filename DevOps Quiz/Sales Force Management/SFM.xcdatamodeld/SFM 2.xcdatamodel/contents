@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17D47" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Emp_Master" representedClassName=".Emp_Master" syncable="YES">
+        <attribute name="channel_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="designation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ecn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emp_branch_code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emp_branch_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emp_email_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emp_market" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emp_mobile_no" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emp_role" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="incentive_amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="kra_score" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="supervisor_ecn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="supervisor_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="supervisor_role" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="IncentiveDetail" representedClassName=".IncentiveDetail" syncable="YES">
+        <attribute name="account_number" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="agent_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="amount_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bal_amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="customer_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fee_amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="freeze" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="incentive_amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="incentive_detail_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="incentive_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="is_active" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="m_amb_amt" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="m_anr_amt" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="m1_amb_amt" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="m1_anr_amt" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="m2_amb_amt" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="m2_anr_amt" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="mobile_activation" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="product_amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="product_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="product_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="source_month" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="source_year" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="synced_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="incentive_overview" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="IncentiveOverview" inverseName="incentive_detail_incentive" inverseEntity="IncentiveOverview" syncable="YES"/>
+    </entity>
+    <entity name="IncentiveOverview" representedClassName=".IncentiveOverview" syncable="YES">
+        <attribute name="agent_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="balance_based" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="created_by" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="effective_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="fee_based" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="freeze" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="incentive_amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="incentive_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="incentive_month" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="incentive_year" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ineffective_date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="internal_flag" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="is_active" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="modified_timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="modify_by" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="multiplier" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="points" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="product_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sort_sequence" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="total_nos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="incentive_detail_incentive" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IncentiveDetail" inverseName="incentive_overview" inverseEntity="IncentiveDetail" syncable="YES"/>
+    </entity>
+    <entity name="KRAOverview" representedClassName=".KRAOverview" syncable="YES">
+        <attribute name="agent_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="amb_depletion" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="casa_nos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="freeze" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="kra_score" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lead_answered" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lead_converted" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="month" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="percentile" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rank" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="total_nos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="MLearningProductItem" representedClassName=".MLearningProductItem" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="item_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="item_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="itemReadStatus" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="m_Learning_Type_Id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="material_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="min_marks" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="no_of_que_display" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="product_Id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quiz_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quiz_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="score_values" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="syncDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="total_marks" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MLearningProductMaster" representedClassName=".MLearningProductMaster" syncable="YES">
+        <attribute name="product_category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="product_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="product_name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MlMaterials" representedClassName=".MlMaterials" syncable="YES">
+        <attribute name="mat_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="material_type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="seq_num" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="ModuleSyncDate" representedClassName=".ModuleSyncDate" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="module" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ProductsList" representedClassName=".ProductsList" syncable="YES">
+        <attribute name="is_active" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="point" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="product_category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="product_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="product_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="product_sub_category" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Emp_Master" positionX="-459" positionY="-90" width="128" height="270"/>
+        <element name="IncentiveDetail" positionX="-279" positionY="128" width="128" height="435"/>
+        <element name="IncentiveOverview" positionX="-668" positionY="17" width="128" height="388"/>
+        <element name="KRAOverview" positionX="-668" positionY="-240" width="128" height="225"/>
+        <element name="MLearningProductItem" positionX="-92" positionY="-180" width="128" height="285"/>
+        <element name="MLearningProductMaster" positionX="-450" positionY="-81" width="128" height="90"/>
+        <element name="MlMaterials" positionX="-477" positionY="-117" width="128" height="88"/>
+        <element name="ModuleSyncDate" positionX="-450" positionY="71" width="128" height="73"/>
+        <element name="ProductsList" positionX="-306" positionY="-144" width="128" height="133"/>
+    </elements>
+</model>
