@@ -22,7 +22,7 @@ class NSAConnection: NSObject, URLSessionDelegate {
         //Creating the absolute URl for the API
         let apiURL = NSAConnection.BaseUrl + apiName
         
-        //Creating the request
+        //Creating the request for server
         var request = URLRequest.init(url: URL.init(string: apiURL)!, cachePolicy: NSURLRequest.CachePolicy.reloadIgnoringCacheData, timeoutInterval: 30)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
